@@ -1,4 +1,4 @@
-# Cat-Dropdown
+# React Salt - Dropdown
 
 菜单项可以用来表明一组动作
 

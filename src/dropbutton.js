@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'cat-button';
+import Button from 'rs-button';
 
 let DropButton = (props) => {
 	return (

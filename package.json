@@ -1,10 +1,10 @@
 {
-  "name": "cat-dropdown",
-  "version": "1.0.0",
+  "name": "rs-dropdown",
+  "version": "0.1.0",
   "description": "",
   "main": "./dist/dropdown.js",
   "scripts": {
-    "dev": "node node_modules/.bin/cat-server",
+    "dev": "node node_modules/.bin/rs-server",
     "pre-publish": "node node_modules/.bin/pre-publish"
   },
   "author": "yanweiqing",
@@ -16,13 +16,13 @@
     "src/"
   ],
   "dependencies": {
-    "cat-button": "^1.1.0",
-    "cat-util": "^1.0.8",
-    "myui-core": "^0.1.0",
+    "rs-button": "^0.1.x",
+    "rs-util": "^0.1.x",
+    "rs-ui-core": "^0.1.x",
     "react": "^0.14.x"
   },
   "devDependencies": {
     "react-dom": "^0.14.x",
-    "regether-rc-server": "^0.1.1"
+    "rs-server": "^0.1.x"
   }
 }

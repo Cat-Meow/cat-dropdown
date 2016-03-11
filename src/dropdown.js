@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { setClass } from 'cat-util';
+import { setClass } from 'rs-util';
 import Item from './item';
 import Header from './header';
 import Divider from './divider';
