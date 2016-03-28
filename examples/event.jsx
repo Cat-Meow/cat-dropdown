@@ -3,8 +3,12 @@ import Dropdown from '../src/dropdown.js';
 
 export default class Example extends Component {
 
-    state = {
-        liveKey: 2
+    constructor(props) {
+        super(props);
+        this.state = {
+            liveKey: 2
+        };
+        this.handleSelect = this.handleSelect.bind(this);
     }
 
     handleSelect(key) {
@@ -39,7 +43,7 @@ export default class Example extends Component {
                     title="Bind Event"
                     trigger="click"
                     liveKey={this.state.liveKey}
-                    onSelect={this.handleSelect.bind(this)}>
+                    onSelect={this.handleSelect}>
                     <Dropdown.Item eventKey="1">价格劣势场次</Dropdown.Item>
                     <Dropdown.Item eventKey="2">独家策略</Dropdown.Item>
                     <Dropdown.Item eventKey="3">测试</Dropdown.Item>

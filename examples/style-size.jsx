@@ -17,6 +17,12 @@ export default class Example extends Component {
                     <Dropdown.Item eventKey="2">独家策略</Dropdown.Item>
                     <Dropdown.Item eventKey="3">测试</Dropdown.Item>
                 </Dropdown>
+
+                <Dropdown title="Normal" myStyle="link">
+                    <Dropdown.Item eventKey="1">价格劣势场次</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">独家策略</Dropdown.Item>
+                    <Dropdown.Item eventKey="3">测试</Dropdown.Item>
+                </Dropdown>
             </div>
         );
     }

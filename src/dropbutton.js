@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'rs-button';
 
-let DropButton = (props) => {
+let DropButton = function(props) {
 	return (
 		<Button {...props} className="dropdown-toggle">
 			<span dangerouslySetInnerHTML={{__html: props.title}} />

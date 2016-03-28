@@ -1,5 +1,7 @@
 import React from 'react';
 
-let Divider = (props) => <li className="divider" />;
+let Divider = function(props) {
+    return <li className="divider" />;
+}
 
 export default Divider;

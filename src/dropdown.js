@@ -26,12 +26,18 @@ class Dropdown extends Component {
         trigger: 'hover'
     }
 
-    state = {
-        visible: false
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible: false
+        };
+
+        ['handleSelect', 'handleClick', 'handleMouseOver', 'handleMouseLeave'].forEach((item) => this[item] = this[item].bind(this));
     }
 
     handleSelect(key, event) {
         this.props.onSelect && this.props.onSelect(key, event);
+        this.handleClick();
     }
 
     handleClick() {
@@ -56,12 +62,12 @@ class Dropdown extends Component {
         }
     }
 
-    _renderContent() {
+    renderContent() {
         let self = this;
         return React.Children.map(this.props.children, child => {
             return React.cloneElement(child, {
                 liveKey: self.props.liveKey,
-                onSelect: self::self.handleSelect
+                onSelect: self.handleSelect
             });
         });
     }
@@ -78,12 +84,12 @@ class Dropdown extends Component {
         return (
             <Node
                 className={classNames}
-                onMouseOver={this::this.handleMouseOver}
-                onMouseLeave={this::this.handleMouseLeave}
+                onMouseOver={this.handleMouseOver}
+                onMouseLeave={this.handleMouseLeave}
             >
-                <DropButton {...this.props} onClick={this::this.handleClick}/>
+                <DropButton {...this.props} onClick={this.handleClick}/>
                 <ul className="dropdown-menu">
-                    {this._renderContent()}
+                    {this.renderContent()}
                 </ul>
             </Node>
         );
